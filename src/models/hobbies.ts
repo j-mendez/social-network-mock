@@ -22,7 +22,7 @@ type HobbieGroupMap = {
 
 class HobbieModel {
   type: HobbieType = 0;
-  description: string = "";
+  description?: string = "";
   exp: HobbieExperience = 0;
 }
 

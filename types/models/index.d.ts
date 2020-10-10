@@ -1,2 +1,2 @@
 export { UserModel } from "./user";
-export { HobbieExperience, HobbieModel, HobbieType } from "./hobbies";
+export { HobbieGroupModel, HobbieGroupMap, HobbieExperience, HobbieModel, HobbieType, } from "./hobbies";

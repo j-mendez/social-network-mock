@@ -18,4 +18,16 @@ const initHobbies = () => {
   return hobbyGroup;
 };
 
-export { initHobbies };
+const initFollowers = ({ hobbiesCollection, usersCollection, user }) => {
+  return user.hobbies
+    .map((hobby) => {
+      const relatedUsers = hobbiesCollection[hobby.type][hobby.exp];
+
+      if (relatedUsers) {
+        return Object.keys(relatedUsers);
+      }
+    })
+    .flat();
+};
+
+export { initHobbies, initFollowers };

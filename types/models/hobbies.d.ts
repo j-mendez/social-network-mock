@@ -14,17 +14,15 @@ declare enum HobbieExperience {
 }
 declare type HobbieGroupMap = {
     [type in HobbieType]: {
-        [exp in HobbieExperience]: {
-            id: string;
-        };
+        [exp in HobbieExperience]: 1 | 0 | boolean;
     };
 };
 declare class HobbieModel {
     type: HobbieType;
-    description: string;
-    exp?: HobbieExperience;
+    description?: string;
+    exp: HobbieExperience;
 }
 declare class HobbieGroupModel {
-    HobbieGroupSection?: HobbieGroupMap;
+    [HobbieGroupSection: number]: HobbieGroupMap;
 }
-export { HobbieGroupModel, HobbieExperience, HobbieType, HobbieModel };
+export { HobbieGroupMap, HobbieGroupModel, HobbieExperience, HobbieType, HobbieModel, };
