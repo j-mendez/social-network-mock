@@ -1,0 +1,21 @@
+{
+  "name": "social-network-mock",
+  "version": "0.0.1",
+  "description": "social network mock for data structures in memory",
+  "main": "src/social-network-mock.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist"
+  },
+  "author": "Jeff Mendez",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jest": "^26.4.0",
+    "ts-jest": "^26.4.1",
+    "tscpaths": "0.0.9",
+    "typescript": "^3.7.5"
+  }
+}
