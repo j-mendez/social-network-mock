@@ -1,0 +1,1 @@
+export { mutateObjectFromArray } from "./mutate";

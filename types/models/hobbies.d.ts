@@ -17,12 +17,12 @@ declare type HobbieGroupMap = {
         [exp in HobbieExperience]: 1 | 0 | boolean;
     };
 };
-declare class HobbieModel {
+interface HobbieModel {
     type: HobbieType;
     description?: string;
     exp: HobbieExperience;
 }
-declare class HobbieGroupModel {
-    [HobbieGroupSection: number]: HobbieGroupMap;
+interface HobbieGroupModel {
+    [section: number]: HobbieGroupMap;
 }
 export { HobbieGroupMap, HobbieGroupModel, HobbieExperience, HobbieType, HobbieModel, };

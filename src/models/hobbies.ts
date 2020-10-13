@@ -20,14 +20,14 @@ type HobbieGroupMap = {
   };
 };
 
-class HobbieModel {
-  type: HobbieType = 0;
-  description?: string = "";
-  exp: HobbieExperience = 0;
+interface HobbieModel {
+  type: HobbieType;
+  description?: string;
+  exp: HobbieExperience;
 }
 
-class HobbieGroupModel {
-  [HobbieGroupSection: number]: HobbieGroupMap;
+interface HobbieGroupModel {
+  [section: number]: HobbieGroupMap;
 }
 
 export {

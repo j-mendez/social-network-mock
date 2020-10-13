@@ -1,19 +1,14 @@
 import { HobbieGroupModel, HobbieExperience, HobbieType } from "@app/models";
-import { ENUM_SPLIT } from "@app/config";
+import { mutateObjectFromArray } from "@app/utils";
 
-const initHobbies = () => {
+const initHobbies = (): HobbieGroupModel => {
   const hobbieTypes = Object.keys(HobbieType);
   const hobbieExp = Object.keys(HobbieExperience);
-  const hobbyGroup = new HobbieGroupModel();
+  const hobbyGroup = {};
   const expMap = {};
 
-  hobbieExp.splice(0, hobbieExp.length / ENUM_SPLIT).forEach((exp) => {
-    expMap[exp] = {};
-  });
-
-  hobbieTypes.splice(0, hobbieTypes.length / ENUM_SPLIT).forEach((type) => {
-    hobbyGroup[type] = expMap;
-  });
+  mutateObjectFromArray(hobbieExp, expMap);
+  mutateObjectFromArray(hobbieTypes, hobbyGroup, expMap);
 
   return hobbyGroup;
 };
