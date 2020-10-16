@@ -10,3 +10,4 @@ declare const generateSocialNetwork: (size?: number, currentUser?: UserModel | u
     followersCollection: any;
 };
 export { generateRandomString, generateRandomHobbie, generateRandomHobbies, generateRandomUsers, generateSocialNetwork, };
+export default generateSocialNetwork;

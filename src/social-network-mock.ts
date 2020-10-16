@@ -110,3 +110,5 @@ export {
   generateRandomUsers,
   generateSocialNetwork,
 };
+
+export default generateSocialNetwork;

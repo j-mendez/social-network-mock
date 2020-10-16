@@ -1,1 +1,1 @@
-export { objectBindFromArray } from "./object-mapper";
+export { mutateObjectFromArray } from "./mutate";

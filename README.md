@@ -1,15 +1,16 @@
 # social-network-mock
 
-social network data mock structures
+[![j-mendez](https://circleci.com/gh/j-mendez/social-network-mock.svg?style=svg)](https://circleci.com/gh/j-mendez/social-network-mock)
+
+Rapidly bootstrap your next project with mock data to replicate a social network. Easily drop it in and replace it as your API grows.
 
 ## Getting Started
 
-1. `npm install`
-2. `npm test`
+1. `npm install social-network-mock --save`
 
 ## How to use
 
-| method                                                                     | Default                     | Info                                                        |
+| Utils                                                                      | Params                      | Info                                                        |
 | -------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- |
 | [generateSocialNetwork(size, currentUser)](src/social-network-mock.ts#L83) | size: 10, currentUser: null | generate a collection of data for a social network mock     |
 | [generateRandomUsers(size, hobbies)](src/social-network-mock.ts#L52)       | size: 10, hobbies: null     | generate a list of random users with hobbie collection sync |
@@ -17,7 +18,14 @@ social network data mock structures
 | [generateRandomHobbie()](src/social-network-mock.ts#L25)                   | none                        | generate a random hobbie                                    |
 | [generateRandomString()](src/social-network-mock.ts#L17)                   | none                        | generate a random string                                    |
 
-## Trade Offs
+## Example
 
-Followers collection can be looked up in linear time for mem usage. Speed > memory trade offs.
-Collections are `normalized` for reduced memory footprint, in order to `denormalize` use [reverse enum mapping](https://www.typescriptlang.org/docs/handbook/enums.html#reverse-mappings) to get the string value.
+```typescript
+import { generateSocialNetwork } from "social-network-mock";
+
+const {
+  usersCollection,
+  hobbiesCollection,
+  followersCollection,
+} = generateSocialNetwork(1000, me);
+```
