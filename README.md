@@ -21,7 +21,22 @@ Rapidly bootstrap your next project with mock data to replicate a social network
 ## Example
 
 ```typescript
-import { generateSocialNetwork } from "social-network-mock";
+import {
+  generateSocialNetwork,
+  HobbieExperience,
+  HobbieType,
+  UserModel,
+} from "social-network-mock";
+
+const me = new UserModel(
+  { firstName: "Bob", middleName: "Adam", lastName: "Johns", suffix: ".SR" },
+  [
+    {
+      exp: HobbieExperience.Beginner,
+      type: HobbieType.Biking,
+    },
+  ]
+);
 
 const {
   usersCollection,

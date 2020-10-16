@@ -1,4 +1,4 @@
-import { UserModel, HobbieModel, HobbieGroupModel } from "@app/models";
+import { UserModel, HobbieExperience, HobbieModel, HobbieGroupMap, HobbieGroupModel, HobbieType } from "@app/models";
 declare const generateRandomString: () => string;
 declare const generateRandomHobbie: () => number;
 declare const generateRandomHobbies: () => HobbieModel[];
@@ -9,5 +9,5 @@ declare const generateSocialNetwork: (size?: number, currentUser?: UserModel | u
     usersCollection: UserModel[];
     followersCollection: any;
 };
-export { generateRandomString, generateRandomHobbie, generateRandomHobbies, generateRandomUsers, generateSocialNetwork, };
+export { generateRandomString, generateRandomHobbie, generateRandomHobbies, generateRandomUsers, generateSocialNetwork, UserModel, HobbieExperience, HobbieModel, HobbieGroupMap, HobbieGroupModel, HobbieType, };
 export default generateSocialNetwork;

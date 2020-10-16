@@ -109,6 +109,12 @@ export {
   generateRandomHobbies,
   generateRandomUsers,
   generateSocialNetwork,
+  UserModel,
+  HobbieExperience,
+  HobbieModel,
+  HobbieGroupMap,
+  HobbieGroupModel,
+  HobbieType,
 };
 
 export default generateSocialNetwork;

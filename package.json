@@ -1,6 +1,6 @@
 {
   "name": "social-network-mock",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "social network mock for data structures in memory",
   "main": "dist/social-network-mock.js",
   "scripts": {
