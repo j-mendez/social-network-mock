@@ -42,4 +42,6 @@ describe("social network", () => {
     expect(usersCollection).toBeTruthy();
     expect(hobbiesCollection).toBeTruthy();
   });
+
+  test.todo("can normalize/denormlize data for readability");
 });
